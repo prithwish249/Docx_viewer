@@ -1,0 +1,42 @@
+.nav {
+  list-style-type: none;
+  display: flex;
+  position: fixed;
+  top: 0;
+  background: white;
+  padding: 20px;
+  box-shadow: 1px 2px 12px 3px lightgrey;
+  max-width: max-content;
+  border-radius: 12px;
+  left: 50%;   
+  transform: translate(-50%, 0);
+  z-index: 999;
+}
+
+.nav li {
+   margin: 5px;
+   font-size: 20px;
+   color: #383838;
+   padding: 10px;
+   border-radius: 50%;
+   
+}
+
+.nav li:hover {
+   background: lightgray;
+   cursor: pointer;
+
+}
+.file-viewer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 100px 0 0 0;
+  z-index: 1;
+}
+
+.file-viewer-rotated {
+  transform: rotate(90deg);
+}
