@@ -24,14 +24,23 @@ const View = () => {
     };
     const handleDownload = () => {
         if (file) {
+            // Prompt user for file name
+            const fileName = prompt("Enter file name for download:", file.name);
+    
+            // If user cancels the prompt, stop the download process
+            if (fileName === null) {
+                return;
+            }
+    
             const link = document.createElement('a');
             link.href = URL.createObjectURL(file);
-            link.download = file.name;
+            link.download = fileName; // Use the user-provided file name
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
         }
     };
+    
 
     const rotateRight = () => {
         if (!ref.current) return;
